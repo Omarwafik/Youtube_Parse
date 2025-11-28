@@ -79,7 +79,7 @@ export default function Video({ video , loading }) {
               : ""}{" "}
             views
           </p>
-          <span className="dot">.</span>
+          <span className="dot"></span>
           <p>
             {video.snippet.publishedAt
               ? timeAgo(video.snippet.publishedAt)
