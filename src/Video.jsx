@@ -3,6 +3,8 @@ import Loading from "./Loading";
 
 export default function Video({ video , loading }) {
   console.log(video);
+  // Helper functions
+  // Format ISO 8601 duration to HH:MM:SS
   function formatDuration(duration) {
     const match = duration?.match(/PT(\d+H)?(\d+M)?(\d+S)?/);
 
@@ -16,6 +18,8 @@ export default function Video({ video , loading }) {
 
     return `${h}${m}:${s}`;
   }
+
+  // Format view count to a readable string (e.g., 1.2K, 3.4M)
   function formatViews(views) {
     const num = Number(views);
 
@@ -31,6 +35,8 @@ export default function Video({ video , loading }) {
 
     return num.toString();
   }
+
+  // Calculate time ago from published date
   function timeAgo(dateString) {
     const date = new Date(dateString);
     const now = new Date();
@@ -49,6 +55,7 @@ export default function Video({ video , loading }) {
     if (months < 12) return `${Math.floor(months)} months ago`;
     return `${Math.floor(years)} years ago`;
   }
+  
   if(loading) {
     return (
       <Loading/>

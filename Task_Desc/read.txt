@@ -1,1 +1,0 @@
-Create a YouTube parser that takes a YouTube channel URL, parses the videos in the channel then displays them in a grid format, so that the video thumbnail on tbe top and its title, and description at the bottom  finally pagination if the numbet of videos are more than 20
